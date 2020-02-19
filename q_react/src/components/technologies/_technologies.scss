@@ -1,0 +1,39 @@
+.technologies {
+  padding: 55px 0;
+  h3 {
+    font-family: 'Patua One', cursive;
+    font-weight: 400;
+    font-size: 20px;
+    color: #aaaaaa;
+    text-transform: none;
+  }
+}
+.technologies-block {
+  display: inline-block;
+  width: 100%;
+}
+.technologies-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.technologies-icon {
+  font-size: 35px;
+  //width: 1em;
+  height: 35px;
+  width: 1em;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
+@media  (min-width: 1024px){
+  .technologies {
+    .container {
+      column-count: 2;
+      column-gap: 150px;
+    }
+  }
+}

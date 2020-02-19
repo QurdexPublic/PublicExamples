@@ -1,0 +1,100 @@
+.count-box {
+  position: relative;
+  padding: 20px 0;
+  background-color: #4a4a4a;
+}
+.count-box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100px;
+  bottom: -50px;
+  display: block;
+
+  background: url("../../img/cloud.png") right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+}
+
+.count-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.count-box__item {
+  position: relative;
+  width: calc(50% - 20px);
+  margin: 10px;
+}
+.count-box__item::before {
+  content: '';
+  padding-top: 100%;
+  float: left;
+}
+.count-box__item .border {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70%;
+  height: 70%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: 4px solid #ffffff;
+}
+.count-box__item .number {
+  font-family: 'Patua One', serif;
+  font-size: 50px;
+  color: #ffffff;
+  line-height: 1em;
+}
+.count-box__item .number  .percent {
+  font-size: 30px;
+}
+.count-box__item .text {
+  font-size: 9px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.count-box__cont {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .count-box {
+    padding: 100px 0;
+  }
+  .count-box::before {
+    top: -150px;
+    bottom: -100px;
+
+    background: url("../../img/cloud.png") right center, url("../../img/cloud.png") left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .count-wrapper {
+    flex-wrap: nowrap;
+  }
+  .count-box__item {
+    position: relative;
+  }
+  .count-box__item .number {
+    font-size: 120px;
+  }
+  .count-box__item .number .percent {
+    font-size: 80px;
+  }
+  .count-box__item .text {
+    font-size: 20px;
+  }
+}

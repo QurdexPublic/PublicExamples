@@ -1,0 +1,71 @@
+.site-order {
+  position: relative;
+  padding: 55px 0 100px ;
+  background-image: url("../img/bg_order_mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.order-title {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Patua One', cursive;
+  line-height: 1.27em;
+  color: #ffffff;
+}
+
+.order-form {
+  .order-label {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    .oder-placeholder {
+      position: absolute;
+      left: 0;
+      top: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #aaaaaa;
+      transition: all 200ms ease-in-out;
+    }
+  }
+  input {
+    height: 28px;
+  }
+  textarea {
+    padding-top: 5px;
+  }
+  .order-item {
+    width: 100%;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    &:focus + .oder-placeholder,
+    &.changed + .oder-placeholder{
+      font-size: 12px;
+      opacity: 0.5;
+      transform: translate(-6px, -18px);
+    }
+  }
+  .question-label {
+    margin-bottom: 60px;
+  }
+  .btn-box {
+    text-align: center;
+  }
+}
+@media  (min-width: 1024px){
+  .site-order {
+    padding: 100px 0;
+    background-image: url("../img/bg_order.jpg");
+    .container {
+      width: 50%;
+    }
+  }
+}
